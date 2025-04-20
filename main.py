@@ -11,7 +11,8 @@ def main():
   num_words = count_words(book_text)
   print(f"{num_words} words found in the document")
   num_chars = count_chars(book_text)
-  for char in num_chars:
-    print(f"\'{char}\': {num_chars[char]}")
+  num_chars_dict_list = sort_char_counts(num_chars)
+  for dict_entry in num_chars_dict_list:
+    print(dict_entry)
 
 main()
